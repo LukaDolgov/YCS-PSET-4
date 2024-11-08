@@ -1,6 +1,98 @@
+/* Apply a fun, modern style to the overall container */
 .App {
   font-family: Arial, sans-serif;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
+  background-color: #f0f0f4; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s;
+}
+
+.App:hover {
+  background-color: #eaedf0; 
+}
+
+
+h1 {
+  color: #3366cc; 
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+h2 {
+  color: #444444; 
+  font-size: 1.5rem;
+  margin: 20px 0;
+  border-bottom: 2px solid #e0e0e0; 
+  padding-bottom: 5px;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #e9f0ff; 
+  transform: translateY(-3px); 
+}
+
+
+button {
+  background-color: #4caf50; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #43a047; 
+  transform: scale(1.05); 
+}
+
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3366cc;
+  outline: none;
+}
+
+
+p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+  margin-top: 20px;
 }
