@@ -38,7 +38,7 @@ function App() {
  
   const filteredCourses = courses.filter((course) =>
     course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    course.code.toLowerCase().includes(searchTerm.toLowerCase())
+    course.credits.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -62,7 +62,7 @@ function App() {
             return (
               <li key={course.id} style={{ marginBottom: '10px', color: isConflict ? 'red' : 'black' }}>
                 <span>
-                  {course.name} {course.code} - {course.credits} credits
+                  {course.name} ({course.code}) - {course.credits} credits
                 </span>
                 <button style={{ marginLeft: '10px', padding: '5px 10px' }} onClick={() => addCourse(course)}>
                   Add
@@ -79,7 +79,7 @@ function App() {
           {selectedCourses.map((course) => (
             <li key={course.id} style={{ marginBottom: '10px' }}>
               <span>
-                {course.name} {course.code} - {course.credits} credits - {course.timeSlot}
+                {course.name} ({course.code}) - {course.credits} credits - {course.timeSlot}
               </span>
               <button
                 style={{ marginLeft: '10px', padding: '5px 10px' }}
