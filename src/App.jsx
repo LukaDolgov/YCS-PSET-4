@@ -38,14 +38,15 @@ function App() {
  
   const filteredCourses = courses.filter((course) =>
     course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    course.credits.toLowerCase().includes(searchTerm.toLowerCase())
+    course.code.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    course.credits === parseInt(searchTerm)
   );
 
   return (
     <div style={{ fontFamily: 'Arial', padding: '20px', textAlign: 'center' }}>
       <h1>Yale Course Scheduler</h1>
 
-      {/* Search Input */}
+      
       <input
         type="text"
         placeholder="Search courses"
